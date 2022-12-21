@@ -1,0 +1,117 @@
+Command Line Prompts:
+    Make project folder
+    
+    Make directory:
+        mkdir my-python-project
+    
+    Navigate to new directory
+        cd my-python-project
+
+#   The Missing Semester of Your CS Education - MIT 2020
+    Course overview + the shell
+
+    https://missing.csail.mit.edu
+    Teachers: John, Anish and Jose
+
+    2019 - 
+    https://missing.csail.mit.edu/2019/
+
+    Windows: PowerShell
+    Linux: Tons of Terminals : BASH Born Again shell
+    MacOS: Bash version on Terminal:
+        MacOS: Default is zsh (Z-shell)
+
+To change shells within MacOS:
+# To update your account to use zsh, please run `chsh -s /bin/zsh`
+# In Terminal: Click on + sign to open multiple terminals | can run both zsh and bash
+
+# Write: May have write file but not write directory...
+# Execute: Search / are you able to gain access : Must have execute permission on every folder Bin/User/Echo etc.
+
+# The default interactive shell is now zsh.
+# To update your account to use zsh, please run `chsh -s /bin/zsh`.
+# For more details, please visit https://support.apple.com/kb/HT208050
+# bash-3.2$
+# https://en.wikipedia.org/wiki/Z_shell
+
+# Born again shell is a programming language; while loops, for loops, conditions, functions, variables (Shell scripting in next lecture)
+# Environment variables: username, home directory, path variable
+# Flag , Option -*, 
+# Input stream is keyboard ; output stream is terminal 
+# | takes output from program to left, and make it the input of program to right
+# | pipes can be used for text, images, video etc. great way to stream video to chromecast from home.... chromecast send over http:....
+# root is a super user - can do whatever they want
+# sometime you need to operator as root - do as su 'super user'
+# sys fs - special 
+# /sys/net/ipv4_forward     | for setting up firewall
+# CMD: # means run this as root
+# gives example of going through sys files, and changing kernel values to light up LEDs of various keys like scroll lock
+# open file: xdg-open
+# lecture notes online - go through exercises at bottom of screen | office hours
+
+
+Shell built-incommands:
+NAME
+     builtin, !, %, ., :, @, [, {, }, alias, alloc, bg, bind, bindkey, break, breaksw, builtins, case, cd, chdir, command, complete, continue, default, dirs, do,
+     done, echo, echotc, elif, else, end, endif, endsw, esac, eval, exec, exit, export, false, fc, fg, filetest, fi, for, foreach, getopts, glob, goto, hash,
+     hashstat, history, hup, if, jobid, jobs, kill, limit, local, log, login, logout, ls-F, nice, nohup, notify, onintr, popd, printenv, printf, pushd, pwd, read,
+     readonly, rehash, repeat, return, sched, set, setenv, settc, setty, setvar, shift, source, stop, suspend, switch, telltc, test, then, time, times, trap, true,
+     type, ulimit, umask, unalias, uncomplete, unhash, unlimit, unset, unsetenv, until, wait, where, which, while – shell built-in commands
+
+~                                           | expands home directory
+chflags nohidden ~/System or ~/Library      | reveals System folder hidden in MacOS
+chflags hidden ~/System                     | reverts
+< file                                      | read content
+echo hello > hello.txt                      | write content     >> append
+cat hello.txt                               | duplicates output from input i.e. print out to...
+curl                                        |  read from or print to webpage
+curl --head --silent google.com             | 
+cut --delimiter=' ' -f2                     
+grep -i content-length                      | search input string for a given keyword
+sudo                                        | do as super user aka do as root user
+sudo su                                     | run this as shell
+sudo find -type f -name '*brightness        | allows us to look around at root files with brightness in them....
+echo 1060 | sudo tee brightness             | tee = right to file and as output
+Control l                                   | clear terminal contents
+Control c                                   | Enter
+-- help
+mv                                          | move file (source target, source directory
+cp                                          | copy (from) (to)
+rm                                          | remove
+rmdir                                       | remove directory       (remember to escape space for multi-word files)
+~/dev/etc                                   | this goes to home then provides relative
+cd -                                        | toggle directory
+date
+echo                                        | (spaces separate arguments)
+echo $path                                  | shows all paths terminal will look for to match run command colon separated list that 
+ls or ls..  or ls -l                        | lists files in current directory, or in parent directory
+which                           
+man zsh                                     | manual for Z shell (man ls, man mv, man rm, etc)
+man zsh all                                 | manual for Z shell all version
+chsh                                        | change shell: without argument, launches interactive session to specify which shell to use as default
+chsh -s /bin/zsh etc.                       | change shell
+echo $Shell                                 | shows current default shell
+cat /etc/shells                             | shows available shell options
+.                                           | current directory
+..                                          | parent directory
+zsh --emulate sh                            | emulate sh
+passwd                                      | changes password
+where
+sudo /usr/bin/chsh -s /bin/zsh              | Zsh will not read any prior Bash dot files; uses default System PATH
+$HOME/.zshrc file for PATH and PS1 prompt   | config so newly launced terminal uses Zsh and read ~/.zshrc file
+#!/bin/bash                                 | script first line which indicates which shell to use for the script
+
+Shell paths:
+paths (either absolute, or relative)        | way to name files :/root    [macOS and Linus use one namesapce, while Win uses different namespace for each partition]
+pwd                                         | print working directory > shows where you currently argument
+cd ../../../../bin/echo world               | change directory
+cd /home | cd ./home                        | change directory to home or ./ to local home
+/bin/zsh
+/bin/bash
+/bin/chsh
+/bin/dash
+/bin/ksh
+/bin/sh
+/bin/tcsh
+
+     

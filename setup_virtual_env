@@ -1,0 +1,9 @@
+# Setup Virtual Environment with packages specific to given projects 3.9, 3.10, 3.11, np, pd, etc
+#Best practice - always create virtual environment, and only work inside that VE
+
+python3 -m venv .venv       #.venv is where the packages will be stored. Add the .venv/to gitigrnore
+source .venv/bin/activate   #activates the virtual environment
+
+
+
+
